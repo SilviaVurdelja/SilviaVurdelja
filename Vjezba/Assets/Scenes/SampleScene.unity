@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 664295597}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 664295598}
   anim: {fileID: 664295594}
+  projectile: {fileID: 296567968393248551, guid: 371a022426c261c4e87a0754168b318b, type: 3}
 --- !u!50 &664295598
 Rigidbody2D:
   serializedVersion: 4

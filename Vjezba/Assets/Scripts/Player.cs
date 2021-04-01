@@ -8,9 +8,9 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     public GameObject projectile;
-    private Vector2 moveDirection;
     private bool isRight = true;
-    private bool Vector3;
+
+    private Vector2 moveDirection;
     private void ProcessInputs ()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -39,18 +39,18 @@ public class Player : MonoBehaviour
     {
         ProcessInputs();
         Animate();
-
-        if (Input.GetKeyDown("K"))
+        
+        if (Input.GetKeyDown("f"))
         {
             var obj = Instantiate(projectile, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity) as GameObject;
             obj.GetComponent<Projectile>().isRight = isRight;
             if (isRight)
             {
-                obj.transform.position = new Vector3(transform.position.x + 1, 7f, transform.position.y, 0);
+                obj.transform.position = new Vector3(transform.position.x + 1.17f, transform.position.y, 0);
             }
             else
             {
-                obj.transform.position = new Vector3(transform.position.x = 1, 7f, transform.position.y, 0);
+                obj.transform.position = new Vector3(transform.position.x + 1.17f, transform.position.y, 0);
             }
         }
     }
@@ -65,3 +65,4 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
     }
 }
+
